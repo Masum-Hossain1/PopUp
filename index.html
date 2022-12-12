@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <title>PopUp Design</title>
+
+    <!-- Css Link -->
+    <link rel="stylesheet" href="style.css" />
+  </head>
+  <body>
+    <div class="container">
+      <button class="btn">Button</button>
+
+      <div class="popup">
+        <img src="./Check.png" alt="CheckIcon" />
+        <h2>Thank You!</h2>
+        <p>Your details has been successfully submitted. Thanks!</p>
+        <button class="close__btn">OK</button>
+      </div>
+    </div>
+
+    <script>
+      const checkBtn = document.querySelector(".btn");
+      const popUp = document.querySelector(".popup");
+      const closeBtn = document.querySelector(".close__btn");
+
+      checkBtn.onclick = () => {
+        popUp.classList.add("active");
+      };
+      closeBtn.onclick = () => {
+        popUp.classList.remove("active");
+      };
+    </script>
+  </body>
+</html>
